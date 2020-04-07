@@ -33,9 +33,8 @@ public class MergeSort {
         int leftSubArray = low;
         int rightSubArray = mid + 1;
         int pointer = low;
-
         while(leftSubArray <= mid && rightSubArray <= high) {
-            if (helper[leftSubArray] < helper[rightSubArray]) {
+            if (helper[leftSubArray] <= helper[rightSubArray]) {
                 array[pointer] = helper[leftSubArray];
                 leftSubArray++;
             } else {
