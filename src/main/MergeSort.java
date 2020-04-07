@@ -12,11 +12,14 @@ public class MergeSort {
             array[i] = scanner.nextInt();
         }
         mergeSort(array, helper, 0, n - 1);
+        for(int i: array) {
+            System.out.printf(i + " ");
+        }
     }
 
     private static void mergeSort(int[] array, int[] helper, int low, int high) {
         if (low < high) {
-            int mid = (high - low) /2 ;
+            int mid = (high + low) /2 ;
             mergeSort(array, helper, low, mid);
             mergeSort(array, helper, mid+1, high);
             mergeSort(array, helper, low, mid, high);
