@@ -42,6 +42,8 @@ public class MyArrayList {
                 list[i] = list[i + 1];
             }
         }
+        index--;
+        list[index] = null;
     }
 
     public int find(final String element) {

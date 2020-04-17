@@ -1,0 +1,77 @@
+package main.Algorithms;
+
+import main.QuickUnion;
+
+import java.util.Arrays;
+
+public class Union_Find_Questions {
+    public int[] members;
+    public PairsTimestamp[] logFiles;
+
+    public PairsTimestamp socialNetworkConnectivity() {
+        int counter = 0;
+        int pointer = 0;
+        QuickUnion union = new QuickUnion(members.length);
+
+        while(counter != members.length - 1) {
+            PairsTimestamp log = logFiles[pointer];
+            if(!union.find(log.getFriend(1), log.getFriend(2))){
+                union.connect(log.getFriend(1), log.getFriend(2));
+                counter++;
+            }
+            pointer++;
+        }
+        return logFiles[pointer];
+    }
+
+    public int[] ids;
+    public int[] rootList;
+    public int[] numberOfObjInTreeNode;
+
+    public Sucessor(final int n) {
+        this.ids = new int[n];
+        this.numberOfObjInTreeNode = new int[n];
+        this.rootList = new int[n];
+
+        for(int i=0; i<n; i++) {
+            rootList[i] = i;
+            ids[i] = i;
+            numberOfObjInTreeNode[i] = 1;
+
+        }
+    }
+
+    public void remove(final int x){
+        connect(x, x+1);
+    }
+
+    public int successor(final int x){
+        return rootList[root(x+1)];
+    }
+
+    public int root( int x){
+        int parent = ids[x];
+        while(!(parent == x)) {
+            ids[parent] = ids[ids[parent]];
+            parent = ids[parent];
+        }
+        return parent;
+    }
+
+    public void connect(final int p, final int q) {
+        int pRoot = root(p);
+        int qRoot = root(q);
+        if(numberOfObjInTreeNode[pRoot] < numberOfObjInTreeNode[qRoot]) {
+            ids[p] = qRoot;
+            numberOfObjInTreeNode[qRoot] += numberOfObjInTreeNode[pRoot];
+        } else {
+            ids[q] = pRoot;
+            numberOfObjInTreeNode[pRoot] += numberOfObjInTreeNode[qRoot];
+            rootList[pRoot] = qRoot;
+        }
+    }
+
+
+
+
+}

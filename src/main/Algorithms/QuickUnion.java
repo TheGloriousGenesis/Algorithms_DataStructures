@@ -52,7 +52,7 @@ public class QuickUnion {
     }
 
 
-    private int root(final int element) {
+    public int root(final int element) {
         int parent = ids[element];
         while(!(parent == element)) {
             // keeps tree flatter by assigning grandparent to parent at every other pass
