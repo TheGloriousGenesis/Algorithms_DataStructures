@@ -1,5 +1,3 @@
-package main;
-
 public class QuickUnion {
     private int[] ids;
     private int[] numberOfObjInTreeNode;

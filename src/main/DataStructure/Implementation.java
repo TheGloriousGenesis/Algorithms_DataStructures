@@ -1,5 +1,3 @@
-package main.DataStructure;
-
 public class Implementation {
     public static void main(String[] args) {
         System.out.println(replaceSpace("Ms Jane Smooth       ", 14));

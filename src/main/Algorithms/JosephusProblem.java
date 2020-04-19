@@ -1,7 +1,3 @@
-package main.Algorithms;
-
-import main.DataStructure.CircularLinkedList;
-
 public class JosephusProblem {
     CircularLinkedList cli = new CircularLinkedList();
     int total = 0;
