@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CodeProjects/Algorithms_DataStructures/src/main/Algorithm_DataStructure.iml" filepath="$PROJECT_DIR$/../CodeProjects/Algorithms_DataStructures/src/main/Algorithm_DataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CodeProjects/HackerRankSolution/HackerRankSolution.iml" filepath="$PROJECT_DIR$/../CodeProjects/HackerRankSolution/HackerRankSolution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CodeProjects/Styling_Exploration/Styling_Exploration.iml" filepath="$PROJECT_DIR$/../CodeProjects/Styling_Exploration/Styling_Exploration.iml" />
+    </modules>
+  </component>
+</project>
