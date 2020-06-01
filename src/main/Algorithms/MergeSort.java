@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+
+//todo
+// Common error with binary/mergesort fix → high = a.length -1, mid = (low + (high - low)) /2
 public class MergeSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
