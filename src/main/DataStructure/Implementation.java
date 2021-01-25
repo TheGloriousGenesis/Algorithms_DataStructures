@@ -1,7 +1,49 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Implementation {
-    public static void main(String[] args) {
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
         System.out.println(replaceSpace("Ms Jane Smooth       ", 14));
         System.out.println(isPalindromePermuation("Tacty Coa"));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = scanner.nextLine();
+
+        long n = scanner.nextLong();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        long result = repeatedString(s, n);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+
+        scanner.close();
+    }
+
+    static long repeatedString(String s, long n) {
+        int lenS = s.length();
+        int amountOfA = lenS - s.replaceAll("a","").length();
+        if (lenS < n) {
+            return amountOfA;
+        }
+
+        long numWholeRepeatedString = n / lenS;
+        int remainingLetters = (int) (n - (numWholeRepeatedString * lenS));
+        long additionalAs = 0;
+        while (remainingLetters > 0) {
+            if (s.charAt(remainingLetters) == 'a') {
+                additionalAs++;
+            }
+            remainingLetters--;
+        }
+
+        return amountOfA * numWholeRepeatedString + additionalAs;
     }
 
     private static String replaceSpace(final String string, final int trueLength) {

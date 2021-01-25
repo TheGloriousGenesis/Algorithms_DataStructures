@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DataStructure" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Percolation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GameDevelopment" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Algorithms/.idea" />
     </content>
     <orderEntry type="inheritedJdk" />

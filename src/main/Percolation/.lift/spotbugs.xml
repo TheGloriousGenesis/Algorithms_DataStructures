@@ -360,17 +360,17 @@
     <!--  COS 226 / COURSERA PROGRAMMING ASSIGNMENT EXCEPTIONS                     -->
     <!--  ***********************************************************************  -->
 
-    <!-- Exclude compare() by slope order in Point.java on collinear assignment -->
+    <!-- Exclude compare() by slope order in CollinearPoints.Point.java on collinear assignment -->
     <!-- It produces a warning even though it properly handles NaN              -->
     <Match>
-        <Class name = "~Point.*(226)?" />
+        <Class name = "~CollinearPoints.Point.*(226)?" />
         <BugPattern name="CO_COMPARETO_INCORRECT_FLOATING" />
     </Match>
 
-    <!-- Exclude compare() by slope order in Point.java on collinear assignment -->
+    <!-- Exclude compare() by slope order in CollinearPoints.Point.java on collinear assignment -->
     <!-- It produces a warning even though it properly handles NaN              -->
     <Match>
-        <Class name = "~(LineSegment)(226)?" />
+        <Class name = "~(CollinearPoints.LineSegment)(226)?" />
         <BugPattern name="HE_HASHCODE_USE_OBJECT_EQUALS" />
     </Match>
 
@@ -445,7 +445,7 @@
     </Match>
 
     <Match>
-        <Class name = "LineSegment" />
+        <Class name = "CollinearPoints.LineSegment" />
         <BugPattern name="HE_EQUALS_USE_HASHCODE" />
     </Match>
 
