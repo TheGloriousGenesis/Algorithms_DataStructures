@@ -29,6 +29,10 @@ public class EvaluatePostFix {
         return numberStack.pop();
     }
 
+    private static void testIpAddress() {
+
+    }
+
     private static int actionOperator(int operand1, int operand2, String operator) {
         switch (operator) {
             case("+"):
